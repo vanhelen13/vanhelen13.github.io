@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><!-- this is the html. The html tag represents the root of an HTML document with the language-->
+<head><!--  This is the Head. The head is a container for metadata and is placed between the html and the body tag--> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This is the viewport, this is the meta tag that tells the browser that the width of the page should be the width of the device. -->
+    <title>Contact </title> <!-- This is the title, this will be the tag that allows me to give the web page an actual title name.  -->
+     <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="js/script.js"></script>
+</head> 
+<body>
+<div id="frmContact">
+    <div id="mail-status"></div>
+    <div>
+        <label style="padding-top:20px;">Name</label><span id="userName-info" class="info"></span><br/>
+        <input type="text" name="userName" id="userName" class="demoInputBox">
+    </div>
+    <div>
+        <label>Email</label><span id="userEmail-info" class="info"></span><br/>
+        <input type="text" name="userEmail" id="userEmail" class="demoInputBox">
+    </div>
+    <div>
+        <label>Comment</label><span id="content-info" class="info"></span><br/>
+        <textarea name="content" id="content" class="demoInputBox" cols="60" rows="6"></textarea>
+    </div>
+    <div>
+        <button name="submit" class="btnAction" onClick="sendContact();">Send</button>
+    </div>
+</div>
+</body>
+</html>
