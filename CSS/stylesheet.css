@@ -19,7 +19,7 @@ li {
   }
   
   .container {
-    display: flex; /* or display: grid; */
+    display: inline; /* or display: grid; */
     align-items: center; /* Center items vertically (flexbox) or grid items (grid) */
     gap: 20px; /* Optional gap between image and text */
   }
@@ -32,7 +32,7 @@ img {
     background-color: rgb(76, 16, 0);
   }
   .containerbottom {
-    display: flex;
+    display: inline;
     justify-content: center;
     align-items: center;
     background-color: rgb(223, 217, 171);
