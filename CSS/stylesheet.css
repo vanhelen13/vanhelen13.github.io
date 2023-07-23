@@ -40,14 +40,14 @@ li {
         display: flex; /* Use flexbox to arrange the image and text horizontally */
         align-items: center; /* Center items vertically */
         max-width: 100%; /* Adjust the width as needed */
-        padding: 5vx;
         background-color: rgb(76, 16, 0);
+        padding: 5vx;
       }
 img {
     max-width: 100%;
     height:auto ;
   }  
-.cofee {
+  .cofee {
     width: 300px;
     height: 300px;
   }
@@ -58,14 +58,29 @@ img {
   .maincoffee {
    height: auto;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1400px; 
  }
   .containerbottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(223, 217, 171);
-    padding: auto;
+    display: flex; /* Use flexbox to arrange the image and text horizontally */
+        align-items: center; /* Center items vertically */
+        max-width: 100%; /* Adjust the width as needed */
+        background-color: rgb(223 217 171);
+        padding: 5vx;
+  }
+  .imagebottom {
+    height: auto;
+    width: 100%;
+    max-width: 1400px; 
+  }
+  .menu {
+    height: auto;
+    width: 100%;
+    max-width: 1400px; 
+  }
+  .shop-page {
+    height: auto;
+    width: 100%;
+    max-width: 1400px; 
   }
 li a {
     color: rgb(76 16 0); /*this is the font color  */
@@ -97,6 +112,26 @@ p {
     color: rgb(76 16 0);
     margin: 20px;
 }
+.shop-icon {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+  }
+
+  /* Additional styles for icon images (optional) */
+  .shop-icon img {
+    max-width: 100px;
+    max-height: px;
+    }
+.social-media {
+    display: inline-block;
+      height: 50px;
+      width: 50px;
+    }
 .ours {
     font-family: "hind", sans-serif;
     font-weight: 400;
@@ -105,7 +140,7 @@ p {
     color: rgb(76 16 0);
 }
 footer {
-    display: flex;
+    display: inline-block;
     color: rgb(76 16 0);/* this is the font color */
     margin: 40px;
     font-size: 15px;
@@ -167,5 +202,5 @@ footer {
             font-weight: 400;
             font-style: normal
         }   
-        .divBg {background-color: white;}   
+        .divBg {background-color: white;}
     }
