@@ -36,3 +36,10 @@ $(document).ready(function() {
     });
   });
 });
+$(document).ready(function() {
+  // Add a click event handler to the menu items
+  $('.menu-item').click(function() {
+    // Toggle the description visibility when a menu item is clicked
+    $(this).find('p , .cofee , .lattee').slideToggle();
+  });
+});
