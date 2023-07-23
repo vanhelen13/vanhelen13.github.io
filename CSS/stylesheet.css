@@ -39,7 +39,7 @@ li {
 .container {
         display: flex; /* Use flexbox to arrange the image and text horizontally */
         align-items: center; /* Center items vertically */
-        max-width: 600px; /* Adjust the width as needed */
+        max-width: 100%; /* Adjust the width as needed */
         margin: 0 auto; /* Center the container horizontally on the page */
         background-color: rgb(76, 16, 0);
       }
