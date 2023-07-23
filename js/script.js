@@ -1,7 +1,9 @@
-$(document).ready(function() {
+// your_script.js
+// Include jQuery dynamically in your JavaScript file
+var script = document.createElement('script');
+script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
+document.head.appendChild(script);
 
-})
-<script>
 $(document).ready(function() {
     var $button = $('<button>' , {
         text: 'Order Now' ,
@@ -36,10 +38,22 @@ $(document).ready(function() {
     });
   });
 });
+
 $(document).ready(function() {
   // Add a click event handler to the menu items
   $('.menu-item').click(function() {
     // Toggle the description visibility when a menu item is clicked
     $(this).find('p , .cofee , .lattee').slideToggle();
   });
+});
+$(document).ready(function() {
+  // Add hover effect to shop icons
+  $('.shop-icon').hover(
+    function() {
+      $(this).css('transform', 'scale(1.2)'); // Scale up the icon on hover
+    },
+    function() {
+      $(this).css('transform', 'scale(1)'); // Restore original size when not hovered
+    }
+  );
 });
