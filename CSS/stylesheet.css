@@ -16,14 +16,20 @@ li {
   .image, .text {
     margin: 0;
     padding: 0;
-  }
-  
+  }  
   .container {
     display: inline; /* or display: grid; */
     align-items: center; /* Center items vertically (flexbox) or grid items (grid) */
     gap: 20px; /* Optional gap between image and text */
   }
-  
+  .button {
+    padding: 10px 20px;
+    color: rgb(76, 16, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
 img {
     max-width: 100%;
     height:auto ;
