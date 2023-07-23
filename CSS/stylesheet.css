@@ -47,10 +47,18 @@ img {
     max-width: 100%;
     height:auto ;
   }  
+.cofee {
+    width: 300px;
+    height: 300px;
+  }
+  .lattee {
+    width: 300px;
+    height: 300px;
+  }
   .maincoffee {
    height: auto;
     width: 100%;
-    max-width: 1400px; 
+    max-width: 1400px;
  }
   .containerbottom {
     display: flex;
