@@ -9,24 +9,27 @@
    <script src="js/script.js"></script>
 </head> 
 <body>
-<div id="frmContact">
-    <div id="mail-status"></div>
-    <div>
-        <label style="padding-top:20px;">Name</label><span id="userName-info" class="info"></span><br/>
-        <input type="text" name="userName" id="userName" class="demoInputBox">
-    </div>
-    <div>
-        <label>Email</label><span id="userEmail-info" class="info"></span><br/>
-        <input type="text" name="userEmail" id="userEmail" class="demoInputBox">
-    </div>
-    <div>
-        <label>Comment</label><span id="content-info" class="info"></span><br/>
-        <textarea name="content" id="content" class="demoInputBox" cols="60" rows="6"></textarea>
-    </div>
-    <div>
-        <button name="submit" class="btnAction" onClick="sendContact();">Send</button>
-    </div>
+    <div class="contactus">
+    <img src="images/maincoffee.jpg">
 </div>
+<div class="containerr">
+        <h1>Contact Us</h1>
+        <form id="contactForm" onsubmit="return validateForm()">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="comment">Comment:</label>
+          <textarea id="comment" name="comment" required></textarea>
+    
+          <button type="submit">Submit</button>
+        </form>
+        <div id="errorMessages"></div>
+      </div>
+    
+      <script src="contact_form.js"></script> <!-- Add a separate JavaScript file -->
 <footer>
     <div class="social-media">
         <img src="images/facebook.png" class="footer-icons"><i class="fab fa-facebook"></i></a>
