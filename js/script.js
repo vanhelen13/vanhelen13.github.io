@@ -57,3 +57,48 @@ $(document).ready(function() {
     }
   );
 });
+function validateForm() {
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var comment = document.getElementById('comment').value;
+
+  // Clear previous error messages
+  document.getElementById('errorMessages').innerHTML = '';
+
+  // Check if name is empty
+  if (name.trim() === '') {
+    showError('Name is required');
+    return false;
+  }
+
+  // Check if email is empty and valid
+  if (email.trim() === '') {
+    showError('Email is required');
+    return false;
+  } else if (!isValidEmail(email)) {
+    showError('Invalid email format');
+    return false;
+  }
+
+  // Check if comment is empty
+  if (comment.trim() === '') {
+    showError('Comment is required');
+    return false;
+  }
+
+  // Form is valid, you can submit the form or handle it through AJAX
+  // For demonstration purposes, we'll just display a success message
+  alert('Form submitted successfully!');
+  return false; // Prevent form submission for this demo
+}
+
+function isValidEmail(email) {
+  // Regular expression for basic email validation
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function showError(message) {
+  var errorMessageDiv = document.getElementById('errorMessages');
+  errorMessageDiv.innerHTML += '<p>' + message + '</p>';
+}
