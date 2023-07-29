@@ -17,25 +17,60 @@
             <li><a href="shop.html">Shop</a></li>
         </ul>
     </nav>
-        <div class="menu">
-          <div class="menu-item">
-            <h3>Coffee</h3>
-            <p>Deliciously brewed coffee</p>
-            <p>$3.75</p>
-            <div class="cofee">
-            <img src="images/coffee.jpeg" alt="This is the coffee">
-            </div>
-          </div>
-          <div class="menu-item">
-            <h3>Latte</h3>
-            <p>Sweet and delectable latte to fit your craving</p>
-            <div class="lattee">
-            <img src="images/latte.jpeg" alt="This is the latte">
-            </div>
-          </div>
-          <!-- Add more menu items as needed -->
+    <div class="shop-container">
+        <!-- Coffee items -->
+        <div class="coffee-item" data-item="Cappuccino">
+          <img src="images/cappuccino.png" alt="Cappuccino" class="coffee-image">
+          <div class="coffee-name">Cappuccino</div>
+          <div class="coffee-price">$3.50</div>
         </div>
-        <footer>
+        <div class="coffee-item" data-item="Coffee">
+          <img src="images/coffee.png" alt="Coffee" class="coffee-image">
+            <div class="coffee-name">Coffee</div>
+            <div class="coffee-price">$2.50</div>
+        </div>
+        <div class="coffee-item" data-item="Latte">
+          <img src="images/latte.png" alt="Latte" class="coffee-image">
+            <div class="coffee-name">Latte</div>
+            <div class="coffee-price">$3.00</div>
+        </div>
+        <div class="coffee-item" data-item="Iced Coffee">
+          <img src="images/Iced_coffee.png" alt="Iced Coffee" class="coffee-image">
+          <div class="coffee-name">Iced Coffee</div>
+        <div class="coffee-price">$3.00</div>
+        </div>
+        <div class="coffee-item" data-item="Bagels">
+          <img src="images/Bagels.png" alt="Bagels" class="coffee-image">
+         <div class="coffee-name">Bagels</div>
+            <div class="coffee-price">$2.50</div>
+        </div>
+        <div class="coffee-item" data-item="Blueberry_Muffins">
+          <img src="images/blue_muffins.png" alt="Blueberry Muffins" class="coffee-image">
+          <div class="coffee-name">Blueberry Muffins</div>
+            <div class="coffee-price">$2.50</div>
+        </div>
+        <div class="coffee-item" data-item="Chocolate_Chip_Muffins">
+          <img src="images/choco_muffins.png" alt="Chocolate Chip Muffins" class="coffee-image">
+          <div class="coffee-name">Chocolate Chip Muffins</div>
+            <div class="coffee-price">$2.50</div>
+        </div>
+        <div class="coffee-item" data-item="Chocolate_croissant">
+          <img src="images/Chocolate_croissant.png" alt="chocolate croissant" class="coffee-image">
+            <div class="coffee-name">Chocolate Croissant</div>
+            <div class="coffee-price">$2.50</div>
+        </div>
+        <div class="coffee-item" data-item="Croissant">
+            <img src="images/fresh_croissant.png" alt="Croissant" class="coffee-image">
+                <div class="coffee-name">Croissant</div>
+                <div class="coffee-price">$2.50</div>
+        </div>
+      </div>
+      <div class="modal" id="orderModal">
+        <h2 class="modal-title">Shopping Cart</h2>
+        <p class="modal-description"></p>
+        <button class="order-button">Add to order</button>
+      </div>
+          <footer>
             <div class="social-media">
                 <img src="images/facebook.png" class="footer-icons"><i class="fab fa-facebook"></i></a>
                 <img src="images/twitter.png" class="footer-icons"><i class="fab fa-twitter"></i></a>
