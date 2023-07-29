@@ -13,32 +13,21 @@ li {
     margin-right: 40px;
 }
   .button {
-    padding: 10px 20px;
+    padding: 5px 10px;
     color: rgb(76, 16, 0);
     border: none;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+    margin: 20px;
+    font-family: "hind", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: left;
   }
-    .button:hover {
-        background-color: rgb(223, 217, 171);
-        padding: 10px 20px;
-    }
-    .button:active {
-        background-color: rgb(223, 217, 171);
-        padding: 10px 20px;
-    }
-    .button:focus {
-        background-color: rgb(223, 217, 171);
-        padding: 10px 20px;
-    }
-    .button:visited {
-        background-color: rgb(223, 217, 171);
-        padding: 10px 20px;
-    }
+
 .container {
         display: flex; /* Use flexbox to arrange the image and text horizontally */
-        align-items: center; /* Center items vertically */
         max-width: 100%; /* Adjust the width as needed */
         background-color: rgb(76, 16, 0);
         padding: 5vx;
@@ -57,8 +46,7 @@ img {
   }
   .maincoffee {
    height: auto;
-    width: 100%;
-    max-width: 1400px; 
+    max-width: 100%; 
  }
   .containerbottom {
     display: flex; /* Use flexbox to arrange the image and text horizontally */
@@ -96,7 +84,8 @@ h1 {
     font-style: normal;
     color: rgb(223, 217, 171);
     margin: 20px;
-    font-size: 20px;
+    font-size: 16px;
+    width: 30%;
 }
 h2 {
     font-family: "hind", sans-serif;
@@ -139,11 +128,54 @@ p {
     font-size: 30px;
     color: rgb(76 16 0);
 }
-footer {
+.contactus {
+    height: 100%;
+    max-width: 100%;
+}
+/* Basic styling for the contact form */
+.containerr {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    background-color: #7E0000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  #errorMessages {
+    color: red;
+    margin-top: 10px;
+  }
+  
+.footer {
     display: inline-block;
     color: rgb(76 16 0);/* this is the font color */
-    margin: 40px;
+    margin: 0 10px;
     font-size: 15px;
+    padding: 20px;
+    text-align: center;
  }
  /* Baseline smart phone portrait */
  @media screen and (min-width: 320px) {
@@ -154,6 +186,9 @@ footer {
         font-style: normal;
     }
     .divBg {background-color: white;}
+    .maincoffee {
+        display: none; /* Hide the image by default */
+    }
  }
  /* Baseline smart phone landscape */
     @media screen and (min-width: 480px) {
@@ -164,6 +199,9 @@ footer {
             font-style: normal;
     }
         .divBg {background-color: white;}
+        .maincoffee {
+            display: none; /* Hide the image by default */
+        }
     }
     /* Baseline tablet portrait */ 
     @media screen and (min-width: 768px) {   
@@ -172,6 +210,9 @@ footer {
             font-family: "hind", sans-serif;
             font-weight: 400;
             font-style: normal;
+        }
+        .maincoffee {
+            display: none; /* Hide the image by default */
         }
         .divBg {background-color: white;}
     }
@@ -183,6 +224,9 @@ footer {
             font-weight: 400;
             font-style: normal;        }
         .divBg {background-color: white;}
+        .maincoffee {
+            display: none; /* Hide the image by default */
+        }
     }
     /* Baseline desktop */
     @media screen and (min-width: 1200px) {
