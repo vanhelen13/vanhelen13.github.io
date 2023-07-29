@@ -14,6 +14,7 @@ $(document).ready(function() {
     });
     $('#button').append($button);
 });
+//contact us page
 $(document).ready(function() {
   // Intercept the form submission
   $('#contactForm').submit(function(event) {
@@ -36,14 +37,6 @@ $(document).ready(function() {
         $('#responseMessage').html('An error occurred while processing the form.');
       }
     });
-  });
-});
-
-$(document).ready(function() {
-  // Add a click event handler to the menu items
-  $('.menu-item').click(function() {
-    // Toggle the description visibility when a menu item is clicked
-    $(this).find('p , .cofee , .lattee').slideToggle();
   });
 });
 $(document).ready(function() {
@@ -102,3 +95,126 @@ function showError(message) {
   var errorMessageDiv = document.getElementById('errorMessages');
   errorMessageDiv.innerHTML += '<p>' + message + '</p>';
 }
+//menu page
+$(document).ready(function() {
+  // Shopping cart array to store selected items
+  const cart = [];
+
+  // Add a click event handler to each coffee item
+  $('.coffee-item').on('click', function() {
+    const itemName = $(this).data('item');
+    const itemPrice = $(this).data('price');
+    const itemImage = $(this).data('image');
+    const itemDescription = $(this).data('description');
+
+    // Update the modal content with the selected coffee item's information
+    $('.modal-title').text(itemName);
+    $('.modal-image').attr('src', itemImage);
+    $('.modal-description').text(itemDescription);
+
+    // Store the selected item's information in the modal's "Add to Order" button
+    $('.order-button').data('item', itemName);
+    $('.order-button').data('price', itemPrice);
+
+    // Display the modal
+    $('#orderModal').fadeIn();
+  });
+
+  // Click event handler for the "Add to Order" button in the modal
+  $('.order-button').on('click', function() {
+    const itemName = $(this).data('item');
+    const itemPrice = $(this).data('price');
+
+    // Create an object representing the selected coffee item
+    const selectedItem = {
+      name: itemName,
+      price: itemPrice,
+      quantity: 1, // You can set the initial quantity to 1 or implement quantity selection in the modal
+    };
+
+    // Add the item to the cart
+    cart.push(selectedItem);
+
+    // Save the cart data to localStorage so it persists across pages
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Close the modal after adding the item to the cart
+    $('#orderModal').fadeOut();
+
+    // Replace the alert with a confirmation message (optional)
+    alert(`Added ${itemName} to the order!`);
+  });
+});
+
+//cart page
+$(document).ready(function() {
+  // Shopping cart array to store selected items
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Function to update the cart item count
+  function updateCartItemCount() {
+    const cartItemCount = cart.length;
+    $('.cart-item-count').text(cartItemCount);
+  }
+
+  // Add a click event handler to each coffee item
+  $('.coffee-item').on('click', function() {
+    const itemName = $(this).data('coffee-item');
+    const itemPrice = $(this).data('coffee-price');
+    const itemImage = $(this).data('coffee-image');
+    const itemDescription = $(this).data('description');
+
+    // Create an object representing the selected coffee item
+    const selectedItem = {
+      name: itemName,
+      price: itemPrice,
+      quantity: 1, // You can set the initial quantity to 1 or implement quantity selection in the modal
+      image: itemImage,
+      description: itemDescription,
+    };
+
+    // Add the item to the cart
+    cart.push(selectedItem);
+
+    // Save the cart data to localStorage so it persists across pages
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Update the cart item count displayed in the cart icon
+    updateCartItemCount();
+
+    // Replace the alert with a confirmation message (optional)
+    alert(`Added ${itemName} to the cart!`);
+  });
+
+  // Function to update the cart item count on page load
+  updateCartItemCount();
+});
+
+$(document).ready(function() {
+  // Retrieve the cart data from localStorage
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Function to create and display the cart items on the cart page
+  function displayCartItems() {
+    // Clear the cart items container to avoid duplicate entries
+    $('#cart-items-container')();
+
+    // Loop through the cart items and create the necessary HTML elements
+    cart.forEach(function(item) {
+      // Create a div element to represent each cart item
+      const cartItemDiv = $('<div class="cart-item">');
+
+      // Add the item details to the cart item div
+      cartItemDiv.append(`<h3>${item.name}</h3>`);
+      cartItemDiv.append(`<p>Price: $${item.price.toFixed(2)}</p>`);
+      // You can add more item details or customize the display as needed
+
+      // Append the cart item div to the cart items container
+      $('#cart-items-container').append(cartItemDiv);
+    });
+  }
+
+  // Call the function to display the cart items on page load
+  displayCartItems();
+});
+
