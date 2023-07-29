@@ -101,21 +101,90 @@ p {
     color: rgb(76 16 0);
     margin: 20px;
 }
-.shop-icon {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    background-color: #f0f0f0;
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
-  }
+.coffee-item {
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-  /* Additional styles for icon images (optional) */
-  .shop-icon img {
-    max-width: 100px;
-    max-height: px;
-    }
+.coffee-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.coffee-name {
+  font-family: "hind", sans-serif;
+  font-weight: bold;
+}
+.coffee-price {
+  font-family: "hind", sans-serif;
+  font-weight: bold;
+}
+ /* Modal styles */
+ .modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cart-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.cart-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.cart-item-info {
+  margin-left: 10px;
+}
+
+.cart-item-name {
+  font-weight: bold;
+}
+
+.cart-total {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* Style for the cart icon */
+.cart-icon {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  margin-right: 20px; 
+}
+
+/* Style for the cart icon image */
+.cart-icon img {
+  width: 30px; 
+  height: auto;
+}
+
+/* Style for the cart item count (optional) */
+.cart-item-count {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  color: rgb(76, 16, 0);
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
 .social-media {
     display: inline-block;
       height: 50px;
