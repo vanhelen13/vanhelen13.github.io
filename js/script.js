@@ -219,3 +219,11 @@ $(document).ready(function() {
   $('#cart-success-modal button').click(function() {
     $('#cart-success-modal').hide();
   });
+  //hamburger menu
+  $(document).ready(function() {
+    console.log("Document ready"); // Check if the document is ready
+    $('.mobile-menu-toggle').click(function() {
+      console.log("Toggle clicked"); // Check if the toggle is clicked
+      $('.nav-list').toggleClass('active');
+    });
+  });
