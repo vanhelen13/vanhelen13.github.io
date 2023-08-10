@@ -12,6 +12,14 @@ li {
     margin-left: 40px;
     margin-right: 40px;
 }
+.ours {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+  
   .button {
     padding: 5px 10px;
     color: rgb(76, 16, 0);
@@ -87,6 +95,14 @@ h1 {
     font-size: 16px;
     width: 30%;
 }
+h3 {
+    font-family: "hind", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    font-style: normal;
+    color: rgb(76 16 0);
+    text-align: center;
+}
 h2 {
     font-family: "hind", sans-serif;
     font-weight: 400;
@@ -99,7 +115,7 @@ p {
     font-weight: 400;
     font-style: normal;
     color: rgb(76 16 0);
-    margin: 20px;
+    text-align: center;
 }
 .coffee-item {
   cursor: pointer;
@@ -137,7 +153,7 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .container {
-  padding: 20px;
+  padding: 20px 20px 20px 20px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -189,12 +205,6 @@ p {
   background-color: #0056b3;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-}
 /* Style for the cart icon */
 .cart-icon {
   display: inline-block;
@@ -241,7 +251,7 @@ p {
 .containerr {
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 10px 20px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -296,6 +306,7 @@ p {
         font-family: "hind", sans-serif;
         font-weight: 400;
         font-style: normal;
+        text-align: center;
     }
     .divBg {background-color: white;}
     .maincoffee {
@@ -351,6 +362,7 @@ p {
             font-family: "hind", sans-serif;
             font-weight: 400;
             font-style: normal;
+            text-align: center;
         }
         .divBg {background-color: white;}
    }
