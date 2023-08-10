@@ -146,10 +146,10 @@ $(document).ready(function() {
   });
 });
 
-//cart page
 $(document).ready(function() {
   // Shopping cart array to store selected items
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  console.log(cart);
 
   // Function to update the cart item count
   function updateCartItemCount() {
@@ -189,32 +189,33 @@ $(document).ready(function() {
   // Function to update the cart item count on page load
   updateCartItemCount();
 });
-
+//shop page
 $(document).ready(function() {
-  // Retrieve the cart data from localStorage
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  // Event listener for form submission
+  $('#gift-card-form').submit(function(e) {
+    e.preventDefault();
+    
+    // Get selected amount
+    const selectedAmount = $('#amount').val();
+    
+    // Display confirmation modal
+    $('#confirmation-modal .modal-amount').text('$' + selectedAmount);
+    $('#confirmation-modal').show();
+  });
 
-  // Function to create and display the cart items on the cart page
-  function displayCartItems() {
-    // Clear the cart items container to avoid duplicate entries
-    $('#cart-items-container')();
-
-    // Loop through the cart items and create the necessary HTML elements
-    cart.forEach(function(item) {
-      // Create a div element to represent each cart item
-      const cartItemDiv = $('<div class="cart-item">');
-
-      // Add the item details to the cart item div
-      cartItemDiv.append(`<h3>${item.name}</h3>`);
-      cartItemDiv.append(`<p>Price: $${item.price.toFixed(2)}</p>`);
-      // You can add more item details or customize the display as needed
-
-      // Append the cart item div to the cart items container
-      $('#cart-items-container').append(cartItemDiv);
-    });
-  }
-
-  // Call the function to display the cart items on page load
-  displayCartItems();
+  // Close modal on button click
+  $('#confirmation-modal button').click(function() {
+    $('#confirmation-modal').hide();
+  });
 });
 
+
+  // Close modal on button click
+  $('#confirmation-modal button').click(function() {
+    $('#confirmation-modal').hide();
+  });
+
+  // Close cart success modal on button click
+  $('#cart-success-modal button').click(function() {
+    $('#cart-success-modal').hide();
+  });
