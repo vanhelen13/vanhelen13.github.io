@@ -300,7 +300,52 @@ p {
  }
  /* Baseline smart phone portrait */
  @media screen and (min-width: 320px) {
-    body {
+  .mobile-menu-toggle {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    padding: 10px;
+  }
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+  }
+    .nav ul {
+      display: none; /* Hide the main menu on mobile */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+  
+    .nav ul.active {
+      display: flex; /* Show the menu when active */
+    }
+  
+    .mobile-menu-toggle {
+      display: block; /* Show the hamburger icon on mobile */
+    }
+  
+    /* Adjustments for mobile menu */
+    .nav li {
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .nav a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+    }
+  }
+  
+  body {
         max-width: 280px;
         font-size: 14px;
         font-family: "hind", sans-serif;
@@ -312,9 +357,55 @@ p {
     .maincoffee {
         display: none; /* Hide the image by default */
     }
- }
+
  /* Baseline smart phone landscape */
     @media screen and (min-width: 480px) {
+      /* Hamburger Icon and Mobile Menu */
+.mobile-menu-toggle {
+  display: none; /* Hide by default */
+  cursor: pointer;
+  padding: 10px;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+}
+  .nav ul {
+    display: none; /* Hide the main menu on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav ul.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* Show the hamburger icon on mobile */
+  }
+
+  /* Adjustments for mobile menu */
+  .nav li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+  }
+}
+
         body {
           max-width: 440px;
             font-size: 16px;
@@ -326,7 +417,6 @@ p {
         .maincoffee {
             display: none; /* Hide the image by default */
         }
-    }
     /* Baseline tablet portrait */ 
     @media screen and (min-width: 768px) {   
         body {
@@ -377,3 +467,14 @@ p {
         }   
         .divBg {background-color: white;}
     }
+/* Regular Desktop Navigation */
+.nav ul {
+  display: block; /* Display the regular navigation menu as block */
+}
+
+/* Hamburger Icon and Mobile Menu */
+.mobile-menu-toggle {
+  display: none; /* Hide the hamburger icon by default */
+}
+
+
