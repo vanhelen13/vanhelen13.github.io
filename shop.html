@@ -9,7 +9,15 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="js/script.js"></script>
    <script src="js/jquery-3.3.1.min.js"></script>         
-</head> 
+</head>
+ <div id="confirmation-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Thank you for purchasing a gift card!</p>
+    <p>Amount: <span class="modal-amount"></span></p>
+    <button class="btn">Close</button>
+  </div>
+</div>
 <body>
     <a href="index.html"><img src="images/jb-logo1-transparent.png" alt="This is the JaveBeen logo" width="80" height="80"></a>
     <nav> <!--This is the navigation bar -->
@@ -26,6 +34,36 @@
     <div class="shop-page">
     <img src="images/shoppage.jpeg" alt="This is the menu">
 </div>
+<div class="gift-card-section">
+    <h2>Gift Cards</h2>
+    <p>Give the gift of delicious coffee with our gift cards.</p>
+    <img src="images/giftcard.jpeg" alt="Gift Card">
+    <form id="gift-card-form">
+      <label for="amount">Select Amount:</label>
+      <select id="amount" name="amount">
+        <option value="10">$10</option>
+        <option value="25">$25</option>
+        <option value="50">$50</option>
+        <option value="100">$100</option>
+      </select>
+      <button type="submit" class="btn">Purchase Gift Card</button>
+    </form>
+    <div class="merchandise-section">
+        <h2>Coffee Merchandise</h2>
+        <p>Shop our collection of coffee mugs and more.</p>
+        
+        <div class="merch-item">
+          <img src="images/cofee-mug.jpg" alt="Coffee Mug">
+          <h3>Coffee Mug</h3>
+          <p class="price">$12.99</p>
+          <button class="add-to-cart-btn" data-item="Coffee Mug" data-price="12.99">Add to Cart</button>
+        </div>
+       <div class="mech-item">
+        <img src="images/coffee-bag.jpg" alt="Coffee Bag">
+        <h3>Coffee Grinds</h3>
+        <p class="price">$15.99</p>
+        <button class="add-to-cart-btn" data-item="Coffee Grinds" data-price="15.99">Add to Cart</button>
+      </div>
     <footer>
         <div class="social-media">
             <img src="images/facebook.png" class="footer-icons"><i class="fab fa-facebook"></i></a>
@@ -33,6 +71,22 @@
             <img src="images/ig.png" class="footer-icons"><i class="fab fa-instagram"></i></a>
             <img src="images/pinterest.png" class="footer-icons"><i class="fab fa-pinterest"></i></a>
           </div>
+          <div id="confirmation-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Thank you for purchasing a gift card!</p>
+              <p>Amount: <span class="modal-amount"></span></p>
+              <button class="btn">Close</button>
+            </div>
+          </div>
+          <div id="cart-success-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Item added to cart!</p>
+              <button class="btn">Close</button>
+            </div>
+          </div>
+                 
 </body>
 </html>
 
